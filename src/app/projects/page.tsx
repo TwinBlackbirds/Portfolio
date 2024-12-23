@@ -18,7 +18,7 @@ export default function Projects() {
     new Project("Dope Project", "Desc2", "https://via.placeholder.com/150", null),
     ];
   return (
-    <main id="projects" className="animate-fade-in h-fit mx-auto w-3/4 grid grid-cols-4 flex-wrap justify-around">
+    <main id="projects" className="animate-fade-in h-fit mx-auto w-fit grid md:grid-cols-3 lg:grid-cols-4 flex-wrap justify-around">
       { 
         projects.map((proj: Project, i) => (
           <Card 
@@ -27,7 +27,7 @@ export default function Projects() {
               image={proj.image}
               title={proj.title}
               url={proj.url} 
-              className="transition mt-8"/>
+              className="transition mt-8 mx-4 lg:mx-12"/>
         ))
       }
 
