@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import {useEffect} from 'react';
 
 export default function Page() {
+  useEffect(() => {document.title = "TwinBlackbirds | Benchmarks"});
+
   return (
     <div className="w-fit mx-auto">
       <h1 className="text-2xl mt-4">Human Benchmark Clone</h1>

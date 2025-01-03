@@ -5,12 +5,10 @@ import { useEffect } from "react";
 import Project from "./project";
 
 export default function Projects() {
-  useEffect(
-    () => { 
-      document.title = "TwinBlackbirds | Projects";
-    }, []);
+  useEffect(() => {document.title = "TwinBlackbirds | Projects"});
+  
   let projects = [
-    new Project("Browser Game", "Platformer browser game", "/assets/150.png", null),
+    new Project("Browser Game", "Platformer browser game", "/assets/150.png", null), // leave link 'null' for non-interactivity
     new Project("Benchmark Game", "Human benchmark clone", "/assets/150.png", "/benchmark")
     ];
   return (
@@ -23,7 +21,8 @@ export default function Projects() {
               image={proj.image}
               title={proj.title}
               url={proj.url} 
-              className="transition mt-8 mx-4 lg:mx-12"/>
+              className="transition mt-8 mx-4 lg:mx-12"
+          />
         ))
       }
 

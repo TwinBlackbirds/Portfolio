@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {sub_50, sub_100, sub_200} from './words';
+
 class Word {
   word: string;
   seen: boolean;
@@ -99,6 +100,7 @@ function beginGame(setGameState: Function) {
 } 
 
 export default function Page() {
+  useEffect(() => {document.title = "TwinBlackbirds | Word Memorization Benchmark"});
   let [gameState, setGameState] = useState(false);
   return (
     <>
