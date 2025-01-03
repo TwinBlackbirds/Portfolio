@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import {createContext, useContext, useRef, useState, useCallback} from 'react';
+import {useState} from 'react';
 import {sub_50, sub_100, sub_200} from './words';
 class Word {
   word: string;
