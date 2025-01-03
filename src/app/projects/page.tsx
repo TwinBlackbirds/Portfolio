@@ -2,7 +2,7 @@
 
 import Card from './card';
 import { useEffect } from "react";
-import Project from "@/app/shared/project";
+import Project from "./project";
 
 export default function Projects() {
   useEffect(
@@ -10,12 +10,8 @@ export default function Projects() {
       document.title = "TwinBlackbirds | Projects";
     }, []);
   let projects = [
-    new Project("Awesome Project", "Desc1", "https://via.placeholder.com/150", "https://example.com"),
-    new Project("Dope Project", "Desc2", "https://via.placeholder.com/150", null),
-    new Project("Super Duper Omega Awesome Project", "Desc3", "https://via.placeholder.com/150", "https://example.com"),
-    new Project("Okay Project", "Desc4", "https://via.placeholder.com/150", "https://example.com"),
-    new Project("Awesome Project", "Desc1", "https://via.placeholder.com/150", "https://example.com"),
-    new Project("Dope Project", "Desc2", "https://via.placeholder.com/150", null),
+    new Project("Browser Game", "Platformer browser game", "assets/150.png", null),
+    new Project("Benchmark Game", "Human benchmark clone", "assets/150.png", "/benchmark")
     ];
   return (
     <main id="projects" className="animate-fade-in h-fit mx-auto w-fit grid md:grid-cols-3 lg:grid-cols-4 flex-wrap justify-around">

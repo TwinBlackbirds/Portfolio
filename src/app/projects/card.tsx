@@ -1,7 +1,8 @@
 'use client';
 
-import Project from "@/app/shared/project";
+import Project from "./project";
 import { SlLink } from "react-icons/sl";
+import Link from 'next/link';
 
 function CardInner(proj: Project) {
   return (
@@ -29,14 +30,14 @@ export default function Card(proj: Project) {
   return (
     <>
       {proj.url ? (
-        <a href={proj.url} target="_blank" rel="noreferrer">
+        <Link href={proj.url}>
           <CardInner
             title={proj.title}
             description={proj.description}
             image={proj.image}
             url={proj.url}
             className={proj.className} />
-        </a>
+        </Link>
       ) : <CardInner
         title={proj.title}
         description={proj.description}
