@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 function CardInner(proj: Project) {
   return (
-    <div className={`${proj.className ? proj.className : ''} ${proj.url ? 'hover:animate-pulse' : ''} bg-neutral-700 rounded-lg max-w-min shadow-lg w-fit h-fit p-4`}>
+    <div className={`${proj.className ? proj.className : ''} ${proj.url ? 'hover:animate-pulse' : ''} bg-neutral-700 rounded-lg lg:max-w-min shadow-lg w-fit h-fit p-4`}>
       {
         proj.image ? (
           <Image src={proj.image} alt={proj.title} width="150" height="150" className="w-full min-w-fit h-48 object-cover rounded-lg" />
@@ -21,7 +21,7 @@ function CardInner(proj: Project) {
         {proj.url ? <span className="flex ml-auto mt-3 mr-0 text-xl"><SlLink /></span> : null}
       </div>
 
-      <p className="text-neutral-400">{proj.description}</p>
+      <p className="text-neutral-400 max-w-48">{proj.description}</p>
     </div>
   );
 }
