@@ -91,7 +91,7 @@ function Game({setGameState}: { setGameState: React.Dispatch<React.SetStateActio
   
 }
 
-function beginGame(setGameState: Function) {
+function beginGame(setGameState: React.Dispatch<React.SetStateAction<boolean>>) {
   // initialize game state
   setGameState(true);
   for (const word of DICT) {
