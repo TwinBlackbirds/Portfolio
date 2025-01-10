@@ -12,9 +12,9 @@ class Word {
     this.seen = false;
   }
 }
-let words: string[] = sub_50;
+const words: string[] = sub_50;
 let DICT: Word[] = [];
-for (let word of words) {
+for (const word of words) {
   DICT.push(new Word(word));
 }
 
@@ -22,11 +22,11 @@ for (let word of words) {
 function seenOrNew(
   key: string, 
   word: Word, 
-  setWord: Function, 
+  setWord: React.Dispatch<React.SetStateAction<Word>>, 
   score: number, 
-  setScore: Function, 
+  setScore: React.Dispatch<React.SetStateAction<number>>, 
   lives: number, 
-  setLives: Function
+  setLives: React.Dispatch<React.SetStateAction<number>>
 ) {
   if ((word.seen && key == "seen") || (!word.seen && key == "new")) {
     setScore(score + 1);
@@ -50,13 +50,13 @@ function seenOrNew(
 
 function Game({setGameState}: { setGameState: React.Dispatch<React.SetStateAction<boolean>> }) {
   // initialize states
-  let [score, setScore] = useState(0);
-  let [lives, setLives] = useState(3);
-  let startingWord = DICT[Math.floor(Math.random() * DICT.length)];
-  let [word, setWord] = useState(startingWord);
+  const [score, setScore] = useState(0);
+  const [lives, setLives] = useState(3);
+  const startingWord = DICT[Math.floor(Math.random() * DICT.length)];
+  const [word, setWord] = useState(startingWord);
   // button callbacks
-  let btnCallbackSeen = () => seenOrNew('seen', word, setWord, score, setScore, lives, setLives);
-  let btnCallbackNew = () => seenOrNew('new', word, setWord, score, setScore, lives, setLives);
+  const btnCallbackSeen = () => seenOrNew('seen', word, setWord, score, setScore, lives, setLives);
+  const btnCallbackNew = () => seenOrNew('new', word, setWord, score, setScore, lives, setLives);
   if (lives > 0) {
     return (
       <div className='mt-4 w-11/12 mx-auto bg-neutral-600 p-4 rounded-lg shadow-sm shadow-neutral-800'>
@@ -73,7 +73,7 @@ function Game({setGameState}: { setGameState: React.Dispatch<React.SetStateActio
     )
   } else {
     // set high score variable
-    let highScore = localStorage.getItem("wordMemorizationHighScore");
+    const highScore = localStorage.getItem("wordMemorizationHighScore");
     if (score > parseInt(highScore || "0")) {
       localStorage.setItem("wordMemorizationHighScore", score.toString());
     }
@@ -94,14 +94,14 @@ function Game({setGameState}: { setGameState: React.Dispatch<React.SetStateActio
 function beginGame(setGameState: Function) {
   // initialize game state
   setGameState(true);
-  for (let word of DICT) {
+  for (const word of DICT) {
     word.seen = false;
   }
 } 
 
 export default function Page() {
   useEffect(() => {document.title = "TwinBlackbirds | Word Memorization Benchmark"});
-  let [gameState, setGameState] = useState(false);
+  const [gameState, setGameState] = useState(false);
   return (
     <>
     <div className='lg:min-w-96 w-fit max-w-xl mx-auto mt-4'>

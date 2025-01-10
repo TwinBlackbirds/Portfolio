@@ -7,7 +7,7 @@ import Project from "./project";
 export default function Projects() {
   useEffect(() => {document.title = "TwinBlackbirds | Projects"});
   
-  let projects = [
+  const projects = [
     new Project("Browser Game", "Runner game inspired by Gravity Guy", "/assets/150.png", null), // leave link 'null' for non-interactivity
     new Project("Benchmark Game", "Human benchmark clone", "/assets/150.png", "/benchmark")
     ];
