@@ -11,7 +11,7 @@ export default function Home() {
     document.title = "TwinBlackbirds | Home";
   }, []);
   return (
-    <main className="animate-pop-in lg:w-1/2 mx-0 min-w-fit sm:w-auto sm:mx-0 md:mx-20 text-center pt-12 lg:shadow-lg rounded-md p-4 bg-neutral-900 lg:rounded-lg lg:mx-auto mt-4">
+    <main className="animate-pop-in sm:w-2/3 lg:w-1/2 mx-0 min-w-fit xs:w-auto xs:sm-0 text-center pt-12 lg:shadow-lg md:rounded-md p-4 bg-neutral-900 lg:rounded-lg sm:mx-auto mt-0 md:mt-4">
       <div>
         <Image className="min-w-20 w-44 max-w-44 mx-auto mb-4 rounded-full outline-8 outline-white outline" src="/pfp.jpg" alt="Album art of MM.. Food? by MF DOOM" width={200} height={200} />
         <h1 className='text-3xl'>TwinBlackbirds</h1>

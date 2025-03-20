@@ -8,8 +8,9 @@ export default function Projects() {
   useEffect(() => {document.title = "TwinBlackbirds | Projects"});
   
   const projects = [
-    new Project("Browser Game", "Runner game inspired by Gravity Guy", "/assets/150.png", null), // leave link 'null' for non-interactivity
-    new Project("Benchmark Game", "Human benchmark clone", "/assets/150.png", "/benchmark")
+    new Project("Benchmark Game", "Human benchmark clone made with Next.js", "/assets/150.png", "/benchmark"),
+    new Project("Library", "Collection of free books with downloads, made in ASP.NET MVC", "/assets/150.png", null),
+    new Project("Object Tracker", "Built in C++ with OpenCV", "/blog_assets/object_tracker/tracker-cover.jpg", "/blog/object_tracker")
     ];
   return (
     <main id="projects" className="animate-fade-in h-fit mx-auto w-fit grid md:grid-cols-3 lg:grid-cols-4 flex-wrap justify-around">

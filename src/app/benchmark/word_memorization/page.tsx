@@ -12,6 +12,7 @@ class Word {
     this.seen = false;
   }
 }
+
 const words: string[] = sub_50;
 let DICT: Word[] = [];
 for (const word of words) {
