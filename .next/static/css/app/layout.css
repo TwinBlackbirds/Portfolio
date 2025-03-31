@@ -648,6 +648,9 @@ video {
 .h-fit {
   height: fit-content;
 }
+.h-auto {
+  height: auto;
+}
 .w-11\/12 {
   width: 91.666667%;
 }
@@ -683,6 +686,9 @@ video {
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-36 {
+  max-width: 9rem;
 }
 .select-none {
   user-select: none;

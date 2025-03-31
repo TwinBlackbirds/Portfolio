@@ -22,13 +22,13 @@ export default function Home() {
         <Link href="https://github.com/TwinBlackbirds">
           <AiFillGithub className="size-20" />
         </Link>
-        <Link href="https://www.linkedin.com/">
+        <Link href="https://www.linkedin.com/in/twinblackbirds/">
           <AiFillLinkedin className="size-20" />
         </Link>
       </div>
       <div className=" select-none w-full justify-center flex flex-row  h-fit mt-40">
         <p className="text-neutral-600 flex flex-row">
-          <DiLinux className="size-8" /> <span className="text-2xl px-4">&gt;</span> <AiFillWindows className="size-8" />
+          <DiLinux title="Linux" className="size-8" /> <span className="text-2xl px-4">&gt;</span> <AiFillWindows title="Windows" className="size-8" />
         </p>
 
       </div>

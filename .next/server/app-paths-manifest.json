@@ -1,6 +1,5 @@
 {
-  "/blog/object_tracker/page": "app/blog/object_tracker/page.js",
-  "/page": "app/page.js",
   "/projects/page": "app/projects/page.js",
-  "/benchmark/page": "app/benchmark/page.js"
+  "/page": "app/page.js",
+  "/blog/object_tracker/page": "app/blog/object_tracker/page.js"
 }

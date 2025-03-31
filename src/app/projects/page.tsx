@@ -8,8 +8,8 @@ export default function Projects() {
   useEffect(() => {document.title = "TwinBlackbirds | Projects"});
   
   const projects = [
-    new Project("Benchmark Game", "Human benchmark clone made with Next.js", "/assets/150.png", "/benchmark"),
-    new Project("Library", "Collection of free books with downloads, made in ASP.NET MVC", "/assets/150.png", null),
+    // new Project("Benchmark Game", "Human benchmark clone made with Next.js", "/assets/150.png", "/benchmark"),
+    new Project("Library", "Collection of free books with downloads, made in ASP.NET MVC", "/assets/library.png", "https://library.twinblackbirds.com"),
     new Project("Object Tracker", "Built in C++ with OpenCV", "/blog_assets/object_tracker/tracker-cover.jpg", "/blog/object_tracker")
     ];
   return (
