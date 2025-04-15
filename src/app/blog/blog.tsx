@@ -12,7 +12,7 @@ export default function Blog(props: BlogProps) {
                     return (
                         <section key={`blog_section_${count}`}>
                             <p className={"my-4"}>{section.content}</p>
-                            {section.picture != null ? <Image className={"w-max"} width={"150"} height={"150"} alt={`Section ${count} of the blog's picture`} src={section.picture!}></Image> : <></>}
+                            {section.picture != null ? <Image className={"w-max"} unoptimized={section.picture.indexOf('gif') > -1} width={"150"} height={"150"} alt={`Section ${count} of the blog's picture`} src={section.picture!}></Image> : <></>}
                         </section>
                     );
                 })}
