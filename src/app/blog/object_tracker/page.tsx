@@ -1,6 +1,7 @@
 'use client';
 
 import {useEffect} from "react";
+import Link from "next/link";
 import Blog from "@/app/blog/blog";
 import BlogProps from "@/app/blog/blogProps";
 import Section from "@/app/blog/section";
@@ -35,7 +36,11 @@ export default function Page() {
                     title={bProps.title}
                     content={bProps.content}
                 />
+                <div className={"text-center"}>
+                    <Link className="text-blue-400" href="https://github.com/TwinBlackbirds/objecttracker" target="_blank" rel="noopener noreferrer">View the project on GitHub</Link>
+                </div>  
             </main>
+            
         </div>
     );
 }
