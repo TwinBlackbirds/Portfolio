@@ -30,7 +30,9 @@ export default function Header() {
       </button>
       <nav className={`absolute top-14 right-0 w-full lg:static lg:flex lg:items-center lg:space-x-4 ${isOpen ? 'block' : 'hidden'}`}>
         <Link onClick={() => setIsOpen(false)} href="/" className="transition hover:bg-neutral-900 bg-neutral-800 lg:rounded-md lg:shadow-lg block px-4 py-2 text-md">Home</Link>
+        <Link onClick={() => setIsOpen(false)} href="/about" className="transition hover:bg-neutral-900 bg-neutral-800 lg:rounded-md lg:shadow-lg block px-4 py-2 text-md">About</Link>
         <Link onClick={() => setIsOpen(false)} href="/projects" className="transition hover:bg-neutral-900 bg-neutral-800 lg:rounded-md lg:shadow-lg block px-4 py-2 text-md">Projects</Link>
+      
       </nav>
     </header>
   );

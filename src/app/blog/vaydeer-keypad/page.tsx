@@ -11,9 +11,20 @@ export default function Page() {
 
     const sections = new Array<Section>();
     sections.push(new Section(
-        "",
+        "This is one of the first projects I made out of sheer necessity. I had purchased a Vaydeer keypad to use as a macro pad for my computer. At the time, I was running Windows. The product comes with a driver installation and a macro configuration software. I thought nothing more of it until I later switched to a Linux environment as my main OS.",
         null,
     ));
+
+    sections.push(new Section(
+        "Upon switching to Linux, I found that the keypad was recognized, however the keys would not function whatsoever. I found a script online which had covered a similar issue and I decided I could rework it to fit my needs. The solution made no sense to me, writing a device file to /dev/null. What mattered though, is that it made the keypad function.",
+        null,
+    ));
+
+    sections.push(new Section(
+        "I quickly threw together a script which would automate the process for all keypad slots that it could potentially be plugged into. Once added to the system startup scripts, the keypad keys output as expected. The only drawback is that it cannot be programmed this way, still requiring a Windows machine to set macros. ",
+        null,
+    ));
+
 
     
     const bProps = new BlogProps(
